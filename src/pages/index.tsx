@@ -1,5 +1,4 @@
-import Header from "../components/Header/Header";
-import "./index.scss";
+import styles from "./index.module.scss";
 import WysiwygEditor from "../components/WysiwygEditor/WysiwygEditor";
 import React, { useRef } from "react";
 import { Editor as TinyMceEditor } from "tinymce";
@@ -14,15 +13,14 @@ export default function HomePage() {
 
   return (
     <>
-      <Header />
       <main>
-        <div className={"o-Page__Content"}>
+        <div>
           <h1> WYSIWYG </h1>
-          <h2>Editeur TinyMCE</h2>
-          <div className={"c-Wysiwyg__Editor"}>
+          <h2>TinyMCE Editor</h2>
+          <div className={styles.cWysiwyg__Editor}>
             <WysiwygEditor forwardedRef={editorRef} />
           </div>
-          <button className={"c-Wysiwyg__Button"} onClick={log}>
+          <button className={styles.cWysiwyg__Button} onClick={log}>
             Log editor content
           </button>
         </div>

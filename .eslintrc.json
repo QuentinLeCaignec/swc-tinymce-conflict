@@ -3,23 +3,10 @@
   "extends": [
     "eslint:recommended",
     "next/core-web-vitals",
-    "plugin:testing-library/react",
-    "plugin:cypress/recommended",
     "plugin:prettier/recommended",
     "prettier"
   ],
-  "plugins": ["testing-library", "prettier"],
-  "overrides": [
-    {
-      "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ],
-      "env": {
-        "jest": true
-      }
-    }
-  ],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": 2,
     "jsx-a11y/anchor-is-valid": [
